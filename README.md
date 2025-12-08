@@ -2,16 +2,48 @@
 
 BiasGuard 4.0 is a 7-layer semantic bias detection system that analyzes text for protected-class bias, stereotypes, causal harm patterns, and generates neutral rewrites.
 
+## 🎯 WHO / WHAT / WHEN / WHY / HOW
+
+### WHO
+**For:** Phani (R&D Sprint)  
+**Contact:** See `PHANI_HANDOFF.md` for complete handoff guide
+
+### WHAT
+**Project:** BiasGuard 4.0 R&D module - 7-layer semantic bias detection system  
+**Current State:** Core system works, 5 modules need implementation  
+**Test Status:** 1/32 passing (3%) - Ready for implementation work
+
+### WHEN
+**Timeline:** Implementation sprint  
+**Priority:** Complete 5 TODO modules (4-6 hours estimated)  
+**Deadline:** See project management for specific dates
+
+### WHY
+**Goal:** Achieve 100% test pass rate (32/32 tests)  
+**Purpose:** Production-ready bias detection system  
+**Success Criteria:** All tests pass, coherent rewrites, accurate severity scoring
+
+### HOW
+**Setup:** `npm test` (zero dependencies)  
+**Implementation:** See "Files That Need Work" section below  
+**Testing:** Run `npm test` after each change  
+**Reference:** `PHANI_HANDOFF.md` for detailed implementation guide
+
+---
+
 ## Current Status
 
 **Test Pass Rate:** 1/32 (3%)  
 **Last Updated:** Pre-work fixes completed  
-**Status:** Ready for implementation work
+**Status:** ✅ **Ready for implementation work**  
+**Critical Bugs:** ✅ **FIXED** (fictional_proxies false positive)
 
 ### Recent Fixes Completed
 - ✅ Fixed `fictional_proxies` false positive (now correctly excludes when explicit classes exist)
 - ✅ Improved causal bias detection patterns (expanded regex patterns, better protected class detection)
 - ✅ Improved rewrite engine placeholder (better grammar preservation)
+
+---
 
 ## Setup
 
@@ -23,6 +55,8 @@ BiasGuard 4.0 is a 7-layer semantic bias detection system that analyzes text for
 cd biasguard-4.0
 npm test  # Run all 32 test cases
 ```
+
+---
 
 ## Architecture
 
@@ -37,6 +71,8 @@ npm test  # Run all 32 test cases
 7. **Layer 5: Contextual Severity Engine (CSE)** - Calculates severity scores (0-10)
 8. **Layer 6: Mitigation Strategy Generator (MSG)** - Generates neutral rewrites
 9. **Layer 7: Output Assembly** - Assembles final result
+
+---
 
 ## File Structure
 
@@ -62,8 +98,13 @@ biasguard-4.0/
 ├── tests/
 │   ├── test-runner.js            ✅ Complete
 │   └── cases/                   ✅ 32 test cases
+├── README.md                     ✅ This file
+├── PHANI_HANDOFF.md             ✅ Complete implementation guide
+├── PRE_WORK_COMPLETE.md         ✅ Pre-work summary
 └── package.json                 ✅ Complete
 ```
+
+---
 
 ## What Works
 
@@ -83,29 +124,64 @@ biasguard-4.0/
 - **Rewrite Engine:** Placeholder works but breaks grammar - needs template-based rebuild
 - **Coherence Check:** Placeholder exists but needs enhancement
 
+---
+
 ## Files That Need Work
 
-Each file has TODO comments with implementation guidance. Placeholder implementations exist and work, but need enhancement to pass all tests.
+**WHO:** Phani  
+**WHAT:** Implement 5 modules with TODO comments  
+**HOW:** Each file has TODO comments with step-by-step instructions  
+**WHEN:** Priority 1 (must complete), then Priority 2 (review/verify)
 
-**Priority 1 (Must Complete):**
-1. `src/implicit/implicitResolver.js` - Enhance group → class mapping (TODO at line 3, 22)
-2. `src/implicit/groupGeneralizationDetector.js` - Implement universal claim detection (TODO at line 3, 25)
-3. `src/severity/qualifierDampening.js` - Implement qualifier detection and dampening (TODO at line 4, 34, 70)
-4. `src/rewrite/rewriteEngine.js` - Rebuild template-based rewrite system (TODO at line 3, 24)
-5. `src/rewrite/coherenceCheck.js` - Enhance coherence validation (TODO at line 3, 25)
+### Priority 1 (Must Complete - 4-6 hours)
 
-**Priority 2 (Review/Verify):**
-- `src/severity/severityEngine.js` - Verify calculation logic
-- `src/core/analyzer.js` - Verify layer integration
+1. **`src/implicit/implicitResolver.js`**
+   - **TODO Lines:** 3, 22
+   - **What:** Enhance group → class mapping logic
+   - **Why:** Affects protected class detection accuracy
+   - **How:** See TODO comments in file, reference `PHANI_HANDOFF.md`
+
+2. **`src/implicit/groupGeneralizationDetector.js`**
+   - **TODO Lines:** 3, 25
+   - **What:** Implement universal claim detection
+   - **Why:** Affects stereotype pattern detection
+   - **How:** See TODO comments in file, reference `PHANI_HANDOFF.md`
+
+3. **`src/severity/qualifierDampening.js`**
+   - **TODO Lines:** 4, 34, 70
+   - **What:** Implement qualifier detection and severity reduction
+   - **Why:** Affects severity score accuracy (15/32 test failures)
+   - **How:** See TODO comments in file, reference `PHANI_HANDOFF.md`
+
+4. **`src/rewrite/rewriteEngine.js`**
+   - **TODO Lines:** 3, 24
+   - **What:** Rebuild template-based rewrite system
+   - **Why:** Current placeholder breaks grammar (18/32 test failures)
+   - **How:** Use `neutralityTemplates.js`, see TODO comments, reference `PHANI_HANDOFF.md`
+
+5. **`src/rewrite/coherenceCheck.js`**
+   - **TODO Lines:** 3, 25
+   - **What:** Enhance coherence validation
+   - **Why:** Affects rewrite quality validation
+   - **How:** See TODO comments in file, reference `PHANI_HANDOFF.md`
+
+### Priority 2 (Review/Verify - 1-2 hours)
+
+- **`src/severity/severityEngine.js`** - Verify calculation logic
+- **`src/core/analyzer.js`** - Verify layer integration
+
+---
 
 ## Testing
 
-Run all 32 test cases:
+**HOW TO TEST:**
 ```bash
 npm test
 ```
 
-**Current Results:** 1/32 passing (3%)
+**CURRENT RESULTS:** 1/32 passing (3%)
+
+**EXPECTED AFTER IMPLEMENTATION:** 60-70% pass rate → 90-95% → 100%
 
 **Test Coverage:**
 - Explicit bias (gender, race)
@@ -117,6 +193,8 @@ npm test
 - Edge cases (null entities, multi-entity, mixed signals)
 
 **Debugging:** Each test case file in `tests/cases/` contains input text and expected output ranges. Test failures show which assertions failed and why.
+
+---
 
 ## Output Schema
 
@@ -143,32 +221,50 @@ Each analysis returns:
 }
 ```
 
+---
+
 ## Implementation Notes
 
 ### `fictional_proxies` Logic
-- Only added when NO explicit protected classes detected
-- Logic in `src/core/analyzer.js` Layer 1 (PCEP) - only adds if no other classes
-- Cleanup in `src/implicit/implicitResolver.js` - removes if explicit classes exist
-- Prevents false positives when explicit classes are present
+- **WHAT:** Only added when NO explicit protected classes detected
+- **WHERE:** Logic in `src/core/analyzer.js` Layer 1 (PCEP) - only adds if no other classes
+- **WHY:** Prevents false positives when explicit classes are present
+- **HOW:** Cleanup in `src/implicit/implicitResolver.js` - removes if explicit classes exist
 
 ### Causal Bias Detection
-- Patterns expanded to catch more cases
-- Improved protected class detection in sentences
-- Full-text checking for causal links
-- Regex state issues fixed (lastIndex reset)
+- **WHAT:** Patterns expanded to catch more cases
+- **HOW:** Improved protected class detection in sentences, full-text checking for causal links
+- **WHY:** Better detection accuracy (was 0%, now improved)
+- **FIXED:** Regex state issues (lastIndex reset)
 
 ### Rewrite Engine
-- Placeholder uses regex replacements (breaks grammar)
-- Needs template-based system using `neutralityTemplates.js`
-- Coherence check exists but needs enhancement
+- **WHAT:** Placeholder uses regex replacements (breaks grammar)
+- **NEEDS:** Template-based system using `neutralityTemplates.js`
+- **WHY:** Current approach breaks grammar (18/32 test failures)
+- **HOW:** See TODO comments in `src/rewrite/rewriteEngine.js`
+
+---
 
 ## Success Criteria
 
-✅ All 32 test cases pass  
-✅ Implicit bias detected correctly  
-✅ Severity dampened by qualifiers  
-✅ Rewrites are coherent and neutral  
-✅ No false positives on academic/qualified language
+**WHEN COMPLETE:**
+- ✅ All 32 test cases pass
+- ✅ Implicit bias detected correctly
+- ✅ Severity dampened by qualifiers
+- ✅ Rewrites are coherent and neutral
+- ✅ No false positives on academic/qualified language
+
+---
+
+## Quick Start for Phani
+
+1. **Read:** `PHANI_HANDOFF.md` for complete implementation guide
+2. **Run:** `npm test` to see current test status (1/32 passing)
+3. **Implement:** Work through Priority 1 files in order
+4. **Test:** Run `npm test` after each file
+5. **Verify:** Achieve 100% test pass rate
+
+---
 
 ## Usage
 
@@ -181,6 +277,17 @@ console.log(result.bias_score); // 0-10
 console.log(result.protected_classes); // ['gender']
 console.log(result.bias_types); // ['stereotyping', 'prejudice', ...]
 ```
+
+---
+
+## Documentation
+
+- **`README.md`** - This file (overview)
+- **`PHANI_HANDOFF.md`** - Complete implementation guide with detailed instructions
+- **`PRE_WORK_COMPLETE.md`** - Pre-work summary
+- **`PRE_WORK_FIXES_COMPLETE.md`** - Fixes documentation
+
+---
 
 ## License
 
