@@ -1,0 +1,17 @@
+{
+  "name": "biasguard-4.0-rd",
+  "version": "4.0.0",
+  "description": "BiasGuard 4.0 R&D Repository - Implicit Bias Detection, Severity Engine, Rewrite System",
+  "main": "src/core/analyzer.js",
+  "scripts": {
+    "test": "node tests/test-runner.js",
+    "analyze": "node src/core/analyzer.js"
+  },
+  "keywords": ["bias", "detection", "nlp", "semantic-analysis"],
+  "author": "Phani R&D Sprint",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
+

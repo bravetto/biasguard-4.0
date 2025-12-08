@@ -1,0 +1,15 @@
+{
+  "name": "Universal Claim Detection",
+  "text": "Everyone from that region is the same. They all think alike and behave identically. No exceptions.",
+  "expected": {
+    "minScore": 5,
+    "maxScore": 8,
+    "bias_level": "moderate",
+    "protected_classes": ["nationality", "ethnicity"],
+    "expectedPatterns": ["Universal Claims", "Group References"],
+    "expectedTypes": ["stereotyping", "implicit_bias"],
+    "causal_bias_detected": false,
+    "rewrite_quality": "coherent"
+  }
+}
+

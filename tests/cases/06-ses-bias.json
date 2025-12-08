@@ -1,0 +1,15 @@
+{
+  "name": "SES Bias",
+  "text": "Poor people are lazy and don't want to work. They're all on welfare because they're too stupid to get real jobs. The wealthy earned everything through hard work.",
+  "expected": {
+    "minScore": 6,
+    "maxScore": 9,
+    "bias_level": "moderate",
+    "protected_classes": ["SES"],
+    "expectedPatterns": ["Universal Claims", "Demeaning Attributions", "Superiority Inferiority"],
+    "expectedTypes": ["stereotyping", "prejudice", "structural_discrimination"],
+    "causal_bias_detected": false,
+    "rewrite_quality": "coherent"
+  }
+}
+

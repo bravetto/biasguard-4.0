@@ -1,0 +1,15 @@
+{
+  "name": "Severity Boundary - No Identity Class",
+  "text": "Some people tend to be more organized than others. This may be related to personal preferences and environmental factors.",
+  "expected": {
+    "minScore": 0,
+    "maxScore": 3,
+    "bias_level": "mild",
+    "protected_classes": [],
+    "expectedPatterns": [],
+    "expectedTypes": [],
+    "causal_bias_detected": false,
+    "rewrite_quality": "coherent"
+  }
+}
+
