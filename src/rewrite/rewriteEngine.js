@@ -30,15 +30,26 @@ class RewriteEngine {
     
     // PLACEHOLDER - Replace with actual implementation
     
-    // Universal Claims → Qualified Statements
+    // Universal Claims → Qualified Statements (improved to preserve grammar)
     rewritten = rewritten.replace(/\b(all|every|each)\s+(\w+)\s+(are|is)\s+(\w+)\b/gi, 
-      'Some $2 may be $4');
+      (match, quantifier, subject, verb, predicate) => {
+        // Preserve verb agreement
+        const verbForm = verb === 'are' ? 'are' : 'is';
+        return `Some ${subject} ${verbForm} ${predicate}`;
+      });
     rewritten = rewritten.replace(/\b(\w+)\s+(always|never)\s+(do|does|are|is)\b/gi, 
-      '$1 sometimes $3');
+      (match, subject, adverb, verb) => {
+        // Preserve verb form
+        return `${subject} sometimes ${verb}`;
+      });
     
-    // Essentialism → Contingency
+    // Essentialism → Contingency (improved to preserve grammar)
     rewritten = rewritten.replace(/\b(\w+)\s+(are|is)\s+inherently\s+(\w+)\b/gi, 
-      'Some $1 may be $3');
+      (match, subject, verb, predicate) => {
+        // Preserve verb agreement
+        const verbForm = verb === 'are' ? 'are' : 'is';
+        return `Some ${subject} ${verbForm} ${predicate}`;
+      });
     rewritten = rewritten.replace(/\b(it'?s|it\s+is)\s+in\s+their\s+nature\b/gi, 
       'This may be observed in some cases');
     

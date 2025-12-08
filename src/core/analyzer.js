@@ -93,7 +93,15 @@ class BiasGuard4Analyzer {
     const entitiesDetected = [];
     const lowerText = text.toLowerCase();
     
+    // First pass: detect all classes except fictional_proxies
+    const nonFictionalClasses = [];
+    
     for (const [category, patterns] of Object.entries(protectedClassesModule.patterns)) {
+      // Skip fictional_proxies in first pass - handle separately
+      if (category === 'fictional_proxies') {
+        continue;
+      }
+      
       let found = false;
       const categoryEntities = [];
       
@@ -125,7 +133,29 @@ class BiasGuard4Analyzer {
       
       if (found) {
         protectedClasses.push(category);
+        nonFictionalClasses.push(category);
         entitiesDetected.push(...categoryEntities);
+      }
+    }
+    
+    // Second pass: Only add fictional_proxies if NO other classes detected
+    // This prevents false positives when explicit classes exist
+    if (nonFictionalClasses.length === 0) {
+      const fictionalPatterns = protectedClassesModule.patterns.fictional_proxies;
+      if (fictionalPatterns && fictionalPatterns.implicit) {
+        const fictionalMatches = text.match(fictionalPatterns.implicit);
+        if (fictionalMatches) {
+          // Only add if we have strong indicators (not just "they" as a pronoun)
+          const strongIndicators = /\b(those\s+people|their\s+kind|that\s+group|such\s+people|they\s+(always|never|all|everyone))\b/gi;
+          if (strongIndicators.test(text)) {
+            protectedClasses.push('fictional_proxies');
+            fictionalMatches.forEach(match => {
+              if (!entitiesDetected.includes(match)) {
+                entitiesDetected.push(match);
+              }
+            });
+          }
+        }
       }
     }
     
