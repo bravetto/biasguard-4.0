@@ -2,6 +2,18 @@
 
 BiasGuard is a 7-layer semantic bias detection system that analyzes text for protected-class bias, stereotypes, causal harm patterns, and generates neutral rewrites. This repository contains the modular implementation with three critical modules that need completion: implicit bias detection, severity/dampening logic, and the rewrite engine.
 
+## Setup
+
+**Requirements:** Node.js >= 14.0.0
+
+**Installation:** None required. This repository has zero external dependencies - all modules are self-contained.
+
+```bash
+git clone https://github.com/bravetto/biasguard-4.0.git
+cd biasguard-4.0
+npm test  # Run tests immediately
+```
+
 ## What You're Building
 
 ### 1. Implicit Bias Detection (`src/implicit/`)
