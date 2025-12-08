@@ -1,7 +1,5 @@
 # BiasGuard 4.0 R&D Repository
 
-**R&D Sprint Goal: Finish before noon.**
-
 BiasGuard is a 7-layer semantic bias detection system that analyzes text for protected-class bias, stereotypes, causal harm patterns, and generates neutral rewrites. This repository contains the modular implementation with three critical modules that need completion: implicit bias detection, severity/dampening logic, and the rewrite engine.
 
 ## What You're Building
@@ -77,8 +75,4 @@ Each test case expects:
 ✅ Severity dampened by qualifiers  
 ✅ Rewrites are coherent and neutral  
 ✅ No false positives on academic/qualified language
-
----
-
-**Let's sync at 12:00. We're building something world-class here.**
 
