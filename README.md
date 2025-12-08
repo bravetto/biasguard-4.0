@@ -43,6 +43,8 @@ Run all 32 test cases:
 npm test
 ```
 
+**Debugging:** Each test case file in `tests/cases/` contains the input text and expected output ranges. Test failures will show which assertions failed and why.
+
 The test suite covers:
 - Explicit bias (gender, race)
 - Implicit bias (nationality, coded xenophobia, cultural essentialism)
@@ -54,12 +56,14 @@ The test suite covers:
 
 ## Files You Need to Modify
 
+Each file has clear TODO comments with step-by-step instructions. Placeholder implementations exist and work, but need enhancement to pass all tests.
+
 **Priority 1 (Must Fix):**
-1. `src/implicit/implicitResolver.js` - Implement group → class mapping
-2. `src/implicit/groupGeneralizationDetector.js` - Detect universal claims
-3. `src/severity/qualifierDampening.js` - Add qualifier detection and severity reduction
-4. `src/rewrite/rewriteEngine.js` - Rebuild template-based rewrite system
-5. `src/rewrite/coherenceCheck.js` - Ensure grammatical coherence
+1. `src/implicit/implicitResolver.js` - Implement group → class mapping (see TODO comments for steps)
+2. `src/implicit/groupGeneralizationDetector.js` - Detect universal claims (see TODO comments for steps)
+3. `src/severity/qualifierDampening.js` - Add qualifier detection and severity reduction (see TODO comments for steps)
+4. `src/rewrite/rewriteEngine.js` - Rebuild template-based rewrite system (see TODO comments for steps)
+5. `src/rewrite/coherenceCheck.js` - Ensure grammatical coherence (see TODO comments for steps)
 
 **Priority 2 (Review/Enhance):**
 - `src/severity/severityEngine.js` - Verify severity calculation logic
