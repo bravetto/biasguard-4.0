@@ -1,0 +1,15 @@
+{
+  "name": "Explicit Race Bias",
+  "text": "Black people are inherently more violent than white people. They cannot control their impulses and should be avoided in public spaces.",
+  "expected": {
+    "minScore": 8,
+    "maxScore": 10,
+    "bias_level": "high",
+    "protected_classes": ["race"],
+    "expectedPatterns": ["Essentialism", "Superiority Inferiority", "Prescriptive Judgments"],
+    "expectedTypes": ["stereotyping", "prejudice", "structural_discrimination"],
+    "causal_bias_detected": true,
+    "rewrite_quality": "coherent"
+  }
+}
+

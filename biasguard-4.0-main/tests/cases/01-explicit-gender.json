@@ -1,0 +1,15 @@
+{
+  "name": "Explicit Gender Bias",
+  "text": "All women are naturally bad at math because they lack logical reasoning skills. This is why they shouldn't be engineers. Men are inherently better at technical work.",
+  "expected": {
+    "minScore": 7,
+    "maxScore": 10,
+    "bias_level": "high",
+    "protected_classes": ["gender"],
+    "expectedPatterns": ["Universal Claims", "Essentialism", "Prescriptive Judgments"],
+    "expectedTypes": ["stereotyping", "prejudice", "performance_bias", "prescriptive_harm"],
+    "causal_bias_detected": true,
+    "rewrite_quality": "coherent"
+  }
+}
+

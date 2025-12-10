@@ -1,0 +1,16 @@
+{
+  "name": "Rewrite Coherence Test",
+  "text": "All teenagers are lazy and disrespectful. They never listen to adults and always cause trouble.",
+  "expected": {
+    "minScore": 5,
+    "maxScore": 8,
+    "bias_level": "moderate",
+    "protected_classes": ["age"],
+    "expectedPatterns": ["Universal Claims", "Demeaning Attributions"],
+    "expectedTypes": ["stereotyping", "prejudice"],
+    "causal_bias_detected": false,
+    "rewrite_quality": "coherent",
+    "rewrite_must_contain": ["subject", "verb"]
+  }
+}
+

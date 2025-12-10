@@ -1,0 +1,15 @@
+{
+  "name": "Religion Bias",
+  "text": "Muslims are all terrorists. They hate our way of life and want to destroy our civilization. They should be banned from entering our country.",
+  "expected": {
+    "minScore": 9,
+    "maxScore": 10,
+    "bias_level": "high",
+    "protected_classes": ["religion", "ethnicity"],
+    "expectedPatterns": ["Universal Claims", "Prescriptive Judgments"],
+    "expectedTypes": ["stereotyping", "hostility", "exclusion", "dehumanization"],
+    "causal_bias_detected": false,
+    "rewrite_quality": "coherent"
+  }
+}
+

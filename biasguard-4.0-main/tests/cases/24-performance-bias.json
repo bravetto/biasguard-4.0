@@ -1,0 +1,15 @@
+{
+  "name": "Performance Bias",
+  "text": "Women can't handle high-pressure situations. They lack the mental toughness required for leadership roles. Men are naturally better suited for these positions.",
+  "expected": {
+    "minScore": 7,
+    "maxScore": 10,
+    "bias_level": "high",
+    "protected_classes": ["gender"],
+    "expectedPatterns": ["Competence Assumptions", "Essentialism", "Superiority Inferiority"],
+    "expectedTypes": ["performance_bias", "stereotyping", "prejudice"],
+    "causal_bias_detected": true,
+    "rewrite_quality": "coherent"
+  }
+}
+

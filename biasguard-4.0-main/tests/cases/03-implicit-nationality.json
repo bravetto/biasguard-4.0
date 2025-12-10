@@ -1,0 +1,15 @@
+{
+  "name": "Implicit Nationality Bias",
+  "text": "People from that country are always late. They don't value punctuality like we do. It's just part of their culture.",
+  "expected": {
+    "minScore": 4,
+    "maxScore": 7,
+    "bias_level": "moderate",
+    "protected_classes": ["nationality", "ethnicity"],
+    "expectedPatterns": ["Universal Claims", "Cultural Essentialism", "Group References"],
+    "expectedTypes": ["stereotyping", "implicit_bias", "coded_language"],
+    "causal_bias_detected": true,
+    "rewrite_quality": "coherent"
+  }
+}
+

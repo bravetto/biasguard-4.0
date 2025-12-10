@@ -1,0 +1,15 @@
+{
+  "name": "Weight Bias",
+  "text": "Fat people are lazy and lack self-control. They're all unhealthy and should be shamed until they lose weight. Thin people are superior in every way.",
+  "expected": {
+    "minScore": 6,
+    "maxScore": 9,
+    "bias_level": "moderate",
+    "protected_classes": ["weight"],
+    "expectedPatterns": ["Universal Claims", "Demeaning Attributions", "Superiority Inferiority", "Prescriptive Judgments"],
+    "expectedTypes": ["stereotyping", "prejudice", "prescriptive_harm"],
+    "causal_bias_detected": false,
+    "rewrite_quality": "coherent"
+  }
+}
+
