@@ -1,0 +1,20 @@
+========================================
+BIASGUARD WEB APP - FINAL LINKS
+========================================
+
+PORT 5000 (No Conflicts):
+  Editor:   http://localhost:5000/editor
+  Home:     http://localhost:5000
+  Dashboard: http://localhost:5000/dashboard
+
+========================================
+SERVER IS STARTING...
+========================================
+
+Wait 15-20 seconds, then open:
+http://localhost:5000/editor
+
+The server is compiling now. Check your terminal for:
+  ✓ Ready in X seconds
+  ○ Local: http://localhost:5000
+

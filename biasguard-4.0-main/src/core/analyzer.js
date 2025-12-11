@@ -324,8 +324,9 @@ class BiasGuard4Analyzer {
       bias_level: cseResult.bias_level,
       protected_classes: pcepResult.protected_classes,
       entities_detected: pcepResult.entities_detected,
-      bias_patterns: speResult.bias_patterns,
-      bias_types: htcResult.bias_types,
+      bias_patterns: speResult.bias_patterns || [],
+      bias_types: htcResult.bias_types || [],
+      examples: speResult.examples || [],
       causal_bias: {
         detected: cibmResult.detected,
         explanations: cibmResult.explanations
