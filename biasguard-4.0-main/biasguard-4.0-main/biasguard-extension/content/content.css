@@ -1,0 +1,39 @@
+/**
+ * BiasGuard Content Script Styles
+ * Ensures consistent styling across all websites
+ */
+
+.biasguard-indicator {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  box-sizing: border-box !important;
+}
+
+.biasguard-tooltip {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  box-sizing: border-box !important;
+}
+
+/* Ensure tooltip is always on top */
+.biasguard-tooltip * {
+  box-sizing: border-box !important;
+}
+
+/* Prevent interference with page styles */
+[data-biasguard="indicator"],
+[data-biasguard="tooltip"] {
+  all: initial;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* Privacy Banner Animations */
+@keyframes slideDown {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
