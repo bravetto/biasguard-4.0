@@ -280,9 +280,9 @@ class BiasGuardPopup {
       this.performQuickCheck()
     })
 
-    // Open editor button
+    // Open editor button - connects to deployed Vercel editor
     document.getElementById('openEditor').addEventListener('click', () => {
-      chrome.tabs.create({ url: 'http://localhost:3001/editor' })
+      chrome.tabs.create({ url: 'https://biasguard.vercel.app/editor' })
     })
 
     // Advanced settings

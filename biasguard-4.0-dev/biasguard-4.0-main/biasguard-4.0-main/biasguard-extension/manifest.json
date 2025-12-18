@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "BiasGuard - Real-time Bias Detection",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Detect and fix bias in your writing across the web. Works on Gmail, social media, Google Docs, and more.",
   "author": "BiasGuard Team",
   
