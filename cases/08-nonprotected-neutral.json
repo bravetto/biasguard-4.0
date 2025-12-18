@@ -1,0 +1,15 @@
+{
+  "name": "Non-Protected Neutral",
+  "text": "Research indicates that individual performance varies across different tasks. Multiple factors contribute to outcomes, including education, experience, and personal motivation.",
+  "expected": {
+    "minScore": 0,
+    "maxScore": 2,
+    "bias_level": "none",
+    "protected_classes": [],
+    "expectedPatterns": [],
+    "expectedTypes": [],
+    "causal_bias_detected": false,
+    "rewrite_quality": "coherent"
+  }
+}
+

@@ -1,0 +1,15 @@
+{
+  "name": "Health/Disability Bias",
+  "text": "People with mental illness are dangerous and unpredictable. They should be locked away from society because they can't function normally.",
+  "expected": {
+    "minScore": 7,
+    "maxScore": 10,
+    "bias_level": "high",
+    "protected_classes": ["disability"],
+    "expectedPatterns": ["Universal Claims", "Prescriptive Judgments", "Competence Assumptions"],
+    "expectedTypes": ["stereotyping", "prescriptive_harm", "exclusion", "performance_bias"],
+    "causal_bias_detected": true,
+    "rewrite_quality": "coherent"
+  }
+}
+

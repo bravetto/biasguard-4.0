@@ -1,0 +1,15 @@
+{
+  "name": "Qualifier Dampening Test",
+  "text": "Some people from that region might sometimes be less punctual. However, this could be related to cultural differences rather than inherent traits.",
+  "expected": {
+    "minScore": 1,
+    "maxScore": 4,
+    "bias_level": "mild",
+    "protected_classes": ["nationality", "ethnicity"],
+    "expectedPatterns": [],
+    "expectedTypes": [],
+    "causal_bias_detected": false,
+    "rewrite_quality": "coherent"
+  }
+}
+

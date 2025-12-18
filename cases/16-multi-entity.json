@@ -1,0 +1,15 @@
+{
+  "name": "Multi-Entity Bias",
+  "text": "Women and immigrants are both inferior to native men. They lack the intelligence and work ethic required for success.",
+  "expected": {
+    "minScore": 8,
+    "maxScore": 10,
+    "bias_level": "high",
+    "protected_classes": ["gender", "nationality", "ethnicity"],
+    "expectedPatterns": ["Superiority Inferiority", "Competence Assumptions"],
+    "expectedTypes": ["prejudice", "structural_discrimination", "performance_bias"],
+    "causal_bias_detected": true,
+    "rewrite_quality": "coherent"
+  }
+}
+

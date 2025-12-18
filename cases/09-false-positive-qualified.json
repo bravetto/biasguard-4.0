@@ -1,0 +1,15 @@
+{
+  "name": "False Positive - Qualified Statement",
+  "text": "Some studies suggest that certain groups may face challenges in specific areas. However, individual variation is significant and should be considered.",
+  "expected": {
+    "minScore": 0,
+    "maxScore": 3,
+    "bias_level": "mild",
+    "protected_classes": [],
+    "expectedPatterns": [],
+    "expectedTypes": [],
+    "causal_bias_detected": false,
+    "rewrite_quality": "coherent"
+  }
+}
+

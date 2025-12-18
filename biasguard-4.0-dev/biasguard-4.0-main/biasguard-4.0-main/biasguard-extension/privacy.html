@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BiasGuard Privacy Policy</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #1e293b;
+      background: #f8fafc;
+      padding: 40px 20px;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 2px solid #e2e8f0;
+    }
+    
+    .header img {
+      width: 48px;
+      height: 48px;
+    }
+    
+    .header h1 {
+      font-size: 32px;
+      color: #0f172a;
+    }
+    
+    h2 {
+      color: #1e293b;
+      margin-top: 32px;
+      margin-bottom: 16px;
+      font-size: 24px;
+    }
+    
+    h3 {
+      color: #334155;
+      margin-top: 24px;
+      margin-bottom: 12px;
+      font-size: 18px;
+    }
+    
+    p {
+      margin-bottom: 16px;
+      color: #475569;
+    }
+    
+    ul {
+      margin-left: 24px;
+      margin-bottom: 16px;
+    }
+    
+    li {
+      margin-bottom: 8px;
+      color: #475569;
+    }
+    
+    .last-updated {
+      color: #64748b;
+      font-size: 14px;
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid #e2e8f0;
+    }
+    
+    .contact {
+      background: #f1f5f9;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="assets/icon48.png" alt="BiasGuard">
+      <h1>BiasGuard Privacy Policy</h1>
+    </div>
+    
+    <p><strong>Last Updated:</strong> <span id="lastUpdated"></span></p>
+    
+    <h2>1. Introduction</h2>
+    <p>
+      BiasGuard ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use the BiasGuard Chrome Extension.
+    </p>
+    
+    <h2>2. Information We Collect</h2>
+    <h3>2.1 Local Storage</h3>
+    <p>BiasGuard uses Chrome's local storage to save:</p>
+    <ul>
+      <li>Your extension settings and preferences</li>
+      <li>Usage statistics (anonymously, local only)</li>
+      <li>Cached analysis results (5-minute TTL)</li>
+      <li>Session information</li>
+    </ul>
+    
+    <h3>2.2 Cookies</h3>
+    <p>With your consent, we may use cookies for:</p>
+    <ul>
+      <li><strong>Necessary Cookies:</strong> Required for the extension to function</li>
+      <li><strong>Functional Cookies:</strong> Remember your preferences</li>
+      <li><strong>Analytics Cookies:</strong> Help us understand usage patterns (anonymous)</li>
+      <li><strong>Marketing Cookies:</strong> Track campaign effectiveness (if enabled)</li>
+    </ul>
+    
+    <h3>2.3 Text Analysis</h3>
+    <p>
+      When you use BiasGuard to analyze text, the text is sent to your configured API endpoint (default: localhost:3001). 
+      We do not store or transmit this text to any third-party services unless explicitly configured by you.
+    </p>
+    
+    <h2>3. How We Use Your Information</h2>
+    <ul>
+      <li>To provide bias detection and analysis services</li>
+      <li>To improve the extension's functionality</li>
+      <li>To remember your preferences and settings</li>
+      <li>To generate anonymous usage statistics</li>
+    </ul>
+    
+    <h2>4. Data Storage and Security</h2>
+    <p>
+      All data is stored locally on your device using Chrome's storage APIs. 
+      We do not collect, store, or transmit personal data to external servers unless:
+    </p>
+    <ul>
+      <li>You explicitly configure a custom API endpoint</li>
+      <li>You choose to share analysis results</li>
+    </ul>
+    
+    <h2>5. Your Rights</h2>
+    <p>You have the right to:</p>
+    <ul>
+      <li>Access your stored data through Chrome's storage settings</li>
+      <li>Delete your data at any time</li>
+      <li>Modify your cookie preferences</li>
+      <li>Disable the extension at any time</li>
+    </ul>
+    
+    <h2>6. Third-Party Services</h2>
+    <p>
+      BiasGuard may connect to external APIs for text analysis. By default, this is your local API server. 
+      If you configure a different endpoint, that service's privacy policy applies.
+    </p>
+    
+    <h2>7. Children's Privacy</h2>
+    <p>
+      BiasGuard is not intended for users under 13 years of age. We do not knowingly collect information from children.
+    </p>
+    
+    <h2>8. Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. We will notify you of any changes by updating the "Last Updated" date.
+    </p>
+    
+    <h2>9. Contact Us</h2>
+    <div class="contact">
+      <p>If you have questions about this Privacy Policy, please contact us:</p>
+      <p><strong>Email:</strong> privacy@biasguard.com</p>
+      <p><strong>Website:</strong> https://biasguard.com</p>
+    </div>
+    
+    <div class="last-updated">
+      <p>This privacy policy is effective as of the date listed above.</p>
+    </div>
+  </div>
+  
+  <script>
+    document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString('en-US', { 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric' 
+    })
+  </script>
+</body>
+</html>
+

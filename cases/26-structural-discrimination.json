@@ -1,0 +1,15 @@
+{
+  "name": "Structural Discrimination",
+  "text": "The poor are inferior to the rich because they lack intelligence and work ethic. Wealthy people are naturally superior in every way.",
+  "expected": {
+    "minScore": 7,
+    "maxScore": 10,
+    "bias_level": "high",
+    "protected_classes": ["SES"],
+    "expectedPatterns": ["Essentialism", "Superiority Inferiority"],
+    "expectedTypes": ["structural_discrimination", "prejudice", "stereotyping"],
+    "causal_bias_detected": true,
+    "rewrite_quality": "coherent"
+  }
+}
+
